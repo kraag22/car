@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5A6E6A79-D88A-4E46-9119-B83FC722DA3D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>car</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CE8710A2-4E85-4527-8D30-D715D5D0CAFF</key>
+		<string>ssh://github.com/kraag22/car.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>car.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CE8710A2-4E85-4527-8D30-D715D5D0CAFF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/kraag22/car.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CE8710A2-4E85-4527-8D30-D715D5D0CAFF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CE8710A2-4E85-4527-8D30-D715D5D0CAFF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>car</string>
+		</dict>
+	</array>
+</dict>
+</plist>
