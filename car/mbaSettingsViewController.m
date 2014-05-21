@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Martin Bartusek. All rights reserved.
 //
 
-#import "mbaSecondViewController.h"
+#import "mbaSettingsViewController.h"
 
-@interface mbaSecondViewController ()
+@interface mbaSettingsViewController ()
 
 @end
 
-@implementation mbaSecondViewController
+@implementation mbaSettingsViewController
 
 - (void)viewDidLoad
 {

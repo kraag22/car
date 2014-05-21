@@ -16,7 +16,7 @@
 		774B914718EC7D6A00D028BE /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774B914518EC7D6A00D028BE /* Main_iPhone.storyboard */; };
 		774B914A18EC7D6A00D028BE /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774B914818EC7D6A00D028BE /* Main_iPad.storyboard */; };
 		774B914D18EC7D6A00D028BE /* mbaFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 774B914C18EC7D6A00D028BE /* mbaFirstViewController.m */; };
-		774B915018EC7D6A00D028BE /* mbaSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 774B914F18EC7D6A00D028BE /* mbaSecondViewController.m */; };
+		774B915018EC7D6A00D028BE /* mbaSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 774B914F18EC7D6A00D028BE /* mbaSettingsViewController.m */; };
 		774B915218EC7D6A00D028BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774B915118EC7D6A00D028BE /* Images.xcassets */; };
 		774B915918EC7D6B00D028BE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774B915818EC7D6B00D028BE /* XCTest.framework */; };
 		774B915A18EC7D6B00D028BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774B913318EC7D6A00D028BE /* Foundation.framework */; };
@@ -52,8 +52,8 @@
 		774B914918EC7D6A00D028BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		774B914B18EC7D6A00D028BE /* mbaFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mbaFirstViewController.h; sourceTree = "<group>"; };
 		774B914C18EC7D6A00D028BE /* mbaFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mbaFirstViewController.m; sourceTree = "<group>"; };
-		774B914E18EC7D6A00D028BE /* mbaSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mbaSecondViewController.h; sourceTree = "<group>"; };
-		774B914F18EC7D6A00D028BE /* mbaSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mbaSecondViewController.m; sourceTree = "<group>"; };
+		774B914E18EC7D6A00D028BE /* mbaSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mbaSettingsViewController.h; sourceTree = "<group>"; };
+		774B914F18EC7D6A00D028BE /* mbaSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mbaSettingsViewController.m; sourceTree = "<group>"; };
 		774B915118EC7D6A00D028BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		774B915718EC7D6B00D028BE /* carTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		774B915818EC7D6B00D028BE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -132,8 +132,8 @@
 				774B914818EC7D6A00D028BE /* Main_iPad.storyboard */,
 				774B914B18EC7D6A00D028BE /* mbaFirstViewController.h */,
 				774B914C18EC7D6A00D028BE /* mbaFirstViewController.m */,
-				774B914E18EC7D6A00D028BE /* mbaSecondViewController.h */,
-				774B914F18EC7D6A00D028BE /* mbaSecondViewController.m */,
+				774B914E18EC7D6A00D028BE /* mbaSettingsViewController.h */,
+				774B914F18EC7D6A00D028BE /* mbaSettingsViewController.m */,
 				77CEB4821923D74500938845 /* mbaTabBarController.h */,
 				77CEB4831923D74500938845 /* mbaTabBarController.m */,
 				774B915118EC7D6A00D028BE /* Images.xcassets */,
@@ -309,7 +309,7 @@
 				774B914018EC7D6A00D028BE /* main.m in Sources */,
 				774B914D18EC7D6A00D028BE /* mbaFirstViewController.m in Sources */,
 				774B914418EC7D6A00D028BE /* mbaAppDelegate.m in Sources */,
-				774B915018EC7D6A00D028BE /* mbaSecondViewController.m in Sources */,
+				774B915018EC7D6A00D028BE /* mbaSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

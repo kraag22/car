@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface mbaSecondViewController : UIViewController
+@interface mbaSettingsViewController : UIViewController
 
 @end
