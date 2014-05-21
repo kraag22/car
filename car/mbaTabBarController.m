@@ -27,7 +27,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.selectedIndex = 1;
+    
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"ip_address"]) {
+        self.selectedIndex = 0;
+    }
+    else {
+        self.selectedIndex = 1;
+    }
+
 }
 
 - (void)didReceiveMemoryWarning

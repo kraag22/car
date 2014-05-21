@@ -10,4 +10,7 @@
 
 @interface mbaSettingsViewController : UIViewController
 
+
+- (void)ipAddressFieldUpdated:(UITextField *)field;
+
 @end

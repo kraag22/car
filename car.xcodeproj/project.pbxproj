@@ -23,6 +23,7 @@
 		774B915B18EC7D6B00D028BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774B913718EC7D6A00D028BE /* UIKit.framework */; };
 		774B916318EC7D6B00D028BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 774B916118EC7D6B00D028BE /* InfoPlist.strings */; };
 		774B916518EC7D6B00D028BE /* carTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 774B916418EC7D6B00D028BE /* carTests.m */; };
+		777439F6192D19EE001CDBAD /* mbaSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777439F5192D19EE001CDBAD /* mbaSettingsView.m */; };
 		77CEB4841923D74500938845 /* mbaTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CEB4831923D74500938845 /* mbaTabBarController.m */; };
 		AA425CF44FE24E609ED7C742 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF8F489A21B4A7FA2482B40 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,8 @@
 		774B916018EC7D6B00D028BE /* carTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "carTests-Info.plist"; sourceTree = "<group>"; };
 		774B916218EC7D6B00D028BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		774B916418EC7D6B00D028BE /* carTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = carTests.m; sourceTree = "<group>"; };
+		777439F4192D19EE001CDBAD /* mbaSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbaSettingsView.h; sourceTree = "<group>"; };
+		777439F5192D19EE001CDBAD /* mbaSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mbaSettingsView.m; sourceTree = "<group>"; };
 		77CEB4821923D74500938845 /* mbaTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbaTabBarController.h; sourceTree = "<group>"; };
 		77CEB4831923D74500938845 /* mbaTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mbaTabBarController.m; sourceTree = "<group>"; };
 		ACD120DE3BDC466A926E7731 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				774B914C18EC7D6A00D028BE /* mbaFirstViewController.m */,
 				774B914E18EC7D6A00D028BE /* mbaSettingsViewController.h */,
 				774B914F18EC7D6A00D028BE /* mbaSettingsViewController.m */,
+				777439F4192D19EE001CDBAD /* mbaSettingsView.h */,
+				777439F5192D19EE001CDBAD /* mbaSettingsView.m */,
 				77CEB4821923D74500938845 /* mbaTabBarController.h */,
 				77CEB4831923D74500938845 /* mbaTabBarController.m */,
 				774B915118EC7D6A00D028BE /* Images.xcassets */,
@@ -309,6 +314,7 @@
 				774B914018EC7D6A00D028BE /* main.m in Sources */,
 				774B914D18EC7D6A00D028BE /* mbaFirstViewController.m in Sources */,
 				774B914418EC7D6A00D028BE /* mbaAppDelegate.m in Sources */,
+				777439F6192D19EE001CDBAD /* mbaSettingsView.m in Sources */,
 				774B915018EC7D6A00D028BE /* mbaSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
