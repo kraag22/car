@@ -32,8 +32,16 @@
 
     [super viewWillAppear:animated];
     
-    NSURL *url = [[NSURL alloc] initWithString:@"https://registry.npmjs.us/"];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    NSString *ipAddress = [[NSUserDefaults standardUserDefaults] valueForKey:@"ip_address"];
+    ipAddress = [NSString stringWithFormat:@"http://%@:12570", ipAddress];
+    NSLog(@"IP:%@", ipAddress);
+    
+    NSURL *url = [[NSURL alloc] initWithString:ipAddress];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setHTTPMethod:@"PUT"];
+    [request setValue:@"GetJSON" forHTTPHeaderField:@"Content-Type"];
+    [request setTimeoutInterval:2.0f];
+    
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     operation.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
@@ -44,8 +52,18 @@
 
     }
                                      failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@", error);
+        NSString *errorDescription = @"Uknown error";
         
+        if ([error.userInfo valueForKey:@"NSLocalizedDescription"]) {
+            errorDescription = [error.userInfo valueForKey:@"NSLocalizedDescription"];
+        }
+        
+        UIAlertView *alert = [[UIAlertView alloc] init];
+        [alert setTitle:NSLocalizedString(@"Connection error", nil)];
+        [alert setMessage:errorDescription];
+        [alert setDelegate:self];
+        [alert addButtonWithTitle:NSLocalizedString(@"OK", nil)];
+        [alert show];
         
     }];
     
