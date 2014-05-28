@@ -6,15 +6,16 @@
 //  Copyright (c) 2014 Martin Bartusek. All rights reserved.
 //
 
-#import "mbaFirstViewController.h"
+#import "mbaLabelsViewController.h"
 #import "AFNetworking.h"
+#import "mbaLabelsView.h"
 
 
-@interface mbaFirstViewController ()
+@interface mbaLabelsViewController ()
 
 @end
 
-@implementation mbaFirstViewController
+@implementation mbaLabelsViewController
 
 - (void)viewDidLoad
 {
@@ -47,8 +48,15 @@
     operation.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *dict = (NSDictionary *)responseObject;
-        NSLog(@"%@", dict);
+        NSDictionary *data = (NSDictionary *)responseObject;
+        NSLog(@"%@", data);
+        
+        NSArray *labels = [data objectForKey:@"labels"];
+
+        
+        for (NSDictionary *label in labels) {
+            [((mbaLabelsView *)self.view) addLabel:label];
+        }
 
     }
                                      failure:^(AFHTTPRequestOperation *operation, NSError *error) {

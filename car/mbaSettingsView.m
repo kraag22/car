@@ -22,7 +22,7 @@
 }
 
 - (void)renderIpAddressForm:(NSString *)ipAddress {
-//WithFrame:CGRectMake(0.0f, 0.0f, 0.0f, 31.0f)
+
     self.ipAddressField = [[UITextField alloc] init];
     
     if (ipAddress) {
