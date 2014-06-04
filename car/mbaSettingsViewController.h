@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface mbaSettingsViewController : UIViewController
+#import "mbaBaseViewController.h"
+
+@interface mbaSettingsViewController : mbaBaseViewController
 
 
 - (void)ipAddressFieldUpdated:(UITextField *)field;

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface mbaLabelsViewController : UIViewController
+#import "mbaBaseViewController.h"
+
+@interface mbaLabelsViewController : mbaBaseViewController
 
 @end

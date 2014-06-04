@@ -26,6 +26,7 @@
 		777439F6192D19EE001CDBAD /* mbaSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777439F5192D19EE001CDBAD /* mbaSettingsView.m */; };
 		77A57A3519365D590039B742 /* mbaLabelsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A57A3419365D590039B742 /* mbaLabelsView.m */; };
 		77B4C19F193F7E2F00CEA6B2 /* mbaButtonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B4C19E193F7E2F00CEA6B2 /* mbaButtonsViewController.m */; };
+		77B4C1A2193F8CA000CEA6B2 /* mbaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B4C1A1193F8CA000CEA6B2 /* mbaBaseViewController.m */; };
 		77CEB4841923D74500938845 /* mbaTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CEB4831923D74500938845 /* mbaTabBarController.m */; };
 		AA425CF44FE24E609ED7C742 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF8F489A21B4A7FA2482B40 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,8 @@
 		77A57A3419365D590039B742 /* mbaLabelsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mbaLabelsView.m; sourceTree = "<group>"; };
 		77B4C19D193F7E2F00CEA6B2 /* mbaButtonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbaButtonsViewController.h; sourceTree = "<group>"; };
 		77B4C19E193F7E2F00CEA6B2 /* mbaButtonsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mbaButtonsViewController.m; sourceTree = "<group>"; };
+		77B4C1A0193F8CA000CEA6B2 /* mbaBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbaBaseViewController.h; sourceTree = "<group>"; };
+		77B4C1A1193F8CA000CEA6B2 /* mbaBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mbaBaseViewController.m; sourceTree = "<group>"; };
 		77CEB4821923D74500938845 /* mbaTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbaTabBarController.h; sourceTree = "<group>"; };
 		77CEB4831923D74500938845 /* mbaTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mbaTabBarController.m; sourceTree = "<group>"; };
 		ACD120DE3BDC466A926E7731 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				774B914318EC7D6A00D028BE /* mbaAppDelegate.m */,
 				774B914518EC7D6A00D028BE /* Main_iPhone.storyboard */,
 				774B914818EC7D6A00D028BE /* Main_iPad.storyboard */,
+				77B4C1A0193F8CA000CEA6B2 /* mbaBaseViewController.h */,
+				77B4C1A1193F8CA000CEA6B2 /* mbaBaseViewController.m */,
 				774B914B18EC7D6A00D028BE /* mbaLabelsViewController.h */,
 				774B914C18EC7D6A00D028BE /* mbaLabelsViewController.m */,
 				77A57A3319365D590039B742 /* mbaLabelsView.h */,
@@ -325,6 +330,7 @@
 				774B914D18EC7D6A00D028BE /* mbaLabelsViewController.m in Sources */,
 				77B4C19F193F7E2F00CEA6B2 /* mbaButtonsViewController.m in Sources */,
 				77A57A3519365D590039B742 /* mbaLabelsView.m in Sources */,
+				77B4C1A2193F8CA000CEA6B2 /* mbaBaseViewController.m in Sources */,
 				774B914418EC7D6A00D028BE /* mbaAppDelegate.m in Sources */,
 				777439F6192D19EE001CDBAD /* mbaSettingsView.m in Sources */,
 				774B915018EC7D6A00D028BE /* mbaSettingsViewController.m in Sources */,

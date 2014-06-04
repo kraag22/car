@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface mbaButtonsViewController : UIViewController
+#import "mbaBaseViewController.h"
+
+@interface mbaButtonsViewController : mbaBaseViewController
 
 @end
