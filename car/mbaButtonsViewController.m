@@ -1,18 +1,18 @@
 //
-//  mbaTabBarController.m
+//  mbaButtonsViewController.m
 //  car
 //
-//  Created by Martin Bartusek on 14.05.14.
+//  Created by Martin Bartusek on 04.06.14.
 //  Copyright (c) 2014 Martin Bartusek. All rights reserved.
 //
 
-#import "mbaTabBarController.h"
+#import "mbaButtonsViewController.h"
 
-@interface mbaTabBarController ()
+@interface mbaButtonsViewController ()
 
 @end
 
-@implementation mbaTabBarController
+@implementation mbaButtonsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,14 +27,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"ip_address"]) {
-        self.selectedIndex = 0;
-    }
-    else {
-        self.selectedIndex = 2;
-    }
-
 }
 
 - (void)didReceiveMemoryWarning
