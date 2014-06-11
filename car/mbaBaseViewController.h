@@ -14,4 +14,6 @@
 
 @property (weak, nonatomic) mbaTabBarController *tabBarController;
 
+- (void)update;
+
 @end

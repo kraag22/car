@@ -69,8 +69,9 @@
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.data = (NSDictionary *)responseObject;
+        [self updateViews];
         NSLog(@"%@", self.data);
-        
+        [self performSelector:@selector(downloadData) withObject:nil afterDelay:[self getRefreshInterval]];
     }
                                      failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                          NSString *errorDescription = @"Uknown error";
@@ -83,7 +84,8 @@
                                          [alert setTitle:NSLocalizedString(@"Connection error", nil)];
                                          [alert setMessage:errorDescription];
                                          [alert setDelegate:self];
-                                         [alert addButtonWithTitle:NSLocalizedString(@"OK", nil)];
+                                         [alert addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
+                                         [alert addButtonWithTitle:NSLocalizedString(@"Try again", nil)];
                                          [alert show];
                                          
                                      }];
@@ -91,7 +93,29 @@
     [operation start];
 }
 
+- (float)getRefreshInterval {
+    float interval = 5.0f;
+    if (self.data && self.data[@"refresh"]) {
+        interval = [self.data[@"refresh"] floatValue];
+    }
+    
+    return interval;
+}
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1) {
+        NSLog(@"download");
+        [self downloadData];
+    }
+    
+    
+}
 
+- (void)updateViews {
+    for (mbaBaseViewController *controller in [self viewControllers]) {
+        [controller update];
+    }
+}
 
 @end

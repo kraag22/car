@@ -32,6 +32,10 @@
 
     [super viewWillAppear:animated];
     
+}
+
+- (void)update {
+    [super update];
     
     NSArray *labels = [self.tabBarController.data objectForKey:@"labels"];
     for (NSDictionary *label in labels) {
@@ -39,5 +43,6 @@
     }
 
 }
+
 
 @end
