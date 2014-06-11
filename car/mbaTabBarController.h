@@ -10,4 +10,6 @@
 
 @interface mbaTabBarController : UITabBarController
 
+@property (strong, nonatomic) NSDictionary *data;
+
 @end
