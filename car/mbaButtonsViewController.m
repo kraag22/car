@@ -8,6 +8,9 @@
 
 #import "mbaButtonsViewController.h"
 
+#import "mbaTabBarController.h"
+#import "mbaButtonsView.h"
+
 @interface mbaButtonsViewController ()
 
 @end
@@ -23,6 +26,25 @@
     return self;
 }
 
+- (void)update {
+    [super update];
+    
+    NSArray *buttons = [self.tabBarController.data objectForKey:@"buttons"];
+    for (NSDictionary *button in buttons) {
+        [((mbaButtonsView *)self.view) addButton:button];
+    }
+    
+}
+
+- (void)buttonStateChange:(id) sender {
+    BOOL state = [sender isOn];
+    NSString *rez = state == YES ? @"YES" : @"NO";
+    
+    NSLog(@"%@ - %i", rez, [sender tag]);
+}
+
+
+#pragma mark - lifecycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];

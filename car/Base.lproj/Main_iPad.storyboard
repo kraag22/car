@@ -129,10 +129,22 @@
                         <viewControllerLayoutGuide type="top" id="DXB-U8-fDD"/>
                         <viewControllerLayoutGuide type="bottom" id="y7C-Dm-qEU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FKK-z8-GOz">
+                    <view key="view" contentMode="scaleToFill" id="FKK-z8-GOz" customClass="mbaButtonsView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="f8H-uJ-IQf">
+                                <rect key="frame" x="20" y="52" width="728" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="headline" destination="f8H-uJ-IQf" id="gml-1V-O8a"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Buttons" id="o2r-cW-qN6"/>
                 </viewController>

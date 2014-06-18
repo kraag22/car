@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7701FD791951E5180032DFAC /* mbaButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7701FD781951E5180032DFAC /* mbaButtonsView.m */; };
 		774B913418EC7D6A00D028BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774B913318EC7D6A00D028BE /* Foundation.framework */; };
 		774B913618EC7D6A00D028BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774B913518EC7D6A00D028BE /* CoreGraphics.framework */; };
 		774B913818EC7D6A00D028BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774B913718EC7D6A00D028BE /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7701FD771951E5180032DFAC /* mbaButtonsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbaButtonsView.h; sourceTree = "<group>"; };
+		7701FD781951E5180032DFAC /* mbaButtonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mbaButtonsView.m; sourceTree = "<group>"; };
 		774B913018EC7D6A00D028BE /* car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = car.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		774B913318EC7D6A00D028BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		774B913518EC7D6A00D028BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,6 +153,8 @@
 				77A57A3419365D590039B742 /* mbaLabelsView.m */,
 				77B4C19D193F7E2F00CEA6B2 /* mbaButtonsViewController.h */,
 				77B4C19E193F7E2F00CEA6B2 /* mbaButtonsViewController.m */,
+				7701FD771951E5180032DFAC /* mbaButtonsView.h */,
+				7701FD781951E5180032DFAC /* mbaButtonsView.m */,
 				774B914E18EC7D6A00D028BE /* mbaSettingsViewController.h */,
 				774B914F18EC7D6A00D028BE /* mbaSettingsViewController.m */,
 				777439F4192D19EE001CDBAD /* mbaSettingsView.h */,
@@ -334,6 +339,7 @@
 				774B914418EC7D6A00D028BE /* mbaAppDelegate.m in Sources */,
 				777439F6192D19EE001CDBAD /* mbaSettingsView.m in Sources */,
 				774B915018EC7D6A00D028BE /* mbaSettingsViewController.m in Sources */,
+				7701FD791951E5180032DFAC /* mbaButtonsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

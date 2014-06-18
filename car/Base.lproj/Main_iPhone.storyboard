@@ -92,10 +92,22 @@
                         <viewControllerLayoutGuide type="top" id="nEq-YF-JMd"/>
                         <viewControllerLayoutGuide type="bottom" id="eze-dw-TpC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QAF-k3-9vC">
+                    <view key="view" contentMode="scaleToFill" id="QAF-k3-9vC" customClass="mbaButtonsView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Glq-bs-bJG">
+                                <rect key="frame" x="20" y="39" width="280" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="headline" destination="Glq-bs-bJG" id="ahY-wo-EBK"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="eCF-hr-UUQ"/>
                 </viewController>

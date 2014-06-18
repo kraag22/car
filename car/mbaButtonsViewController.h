@@ -12,4 +12,7 @@
 
 @interface mbaButtonsViewController : mbaBaseViewController
 
+
+- (void)buttonStateChange:(id) sender;
+
 @end
