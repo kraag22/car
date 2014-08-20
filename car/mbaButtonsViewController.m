@@ -10,6 +10,7 @@
 
 #import "mbaTabBarController.h"
 #import "mbaButtonsView.h"
+#import "AFNetworking.h"
 
 @interface mbaButtonsViewController ()
 
@@ -41,8 +42,40 @@
     NSString *rez = state == YES ? @"YES" : @"NO";
     
     NSLog(@"%@ - %i", rez, [sender tag]);
+    [self apiPostButtons];
 }
 
+- (void)apiPostButtons {
+    
+    NSString *ipAddress = [[NSUserDefaults standardUserDefaults] valueForKey:@"ip_address"];
+    ipAddress = [NSString stringWithFormat:@"http://%@:12570", ipAddress];
+    NSLog(@"IP:%@", ipAddress);
+    
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    
+    
+    NSMutableArray *params = [[NSMutableArray alloc] init];
+
+    [params addObject: @{@"id" :@1, @"value" : @0, @"title": @"ajoj" }];
+    [params addObject: @{@"id" :@2, @"value" : @1, @"title": @"ahojj" }];
+    
+    
+    [manager POST:ipAddress parameters:@{@"buttons": params}
+          success:^(AFHTTPRequestOperation *operation, id responseObject)
+    {
+        NSLog(@"JSON: %@", responseObject);
+    }
+          failure:
+     ^(AFHTTPRequestOperation *operation, NSError *error) {
+         NSLog(@"Error: %@", error);
+     }];
+}
 
 #pragma mark - lifecycle
 - (void)viewDidLoad
