@@ -65,7 +65,7 @@
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
-    operation.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+    operation.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.data = (NSDictionary *)responseObject;
