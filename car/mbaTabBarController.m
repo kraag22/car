@@ -22,6 +22,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.connectionErrorNo = 0;
     }
     return self;
 }
@@ -75,18 +76,25 @@
     }
                                      failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                          NSString *errorDescription = @"Uknown error";
+                                         self.connectionErrorNo++;
+                                         NSLog(@"errors: %i", self.connectionErrorNo);
                                          
                                          if ([error.userInfo valueForKey:@"NSLocalizedDescription"]) {
                                              errorDescription = [error.userInfo valueForKey:@"NSLocalizedDescription"];
                                          }
                                          
-                                         UIAlertView *alert = [[UIAlertView alloc] init];
-                                         [alert setTitle:NSLocalizedString(@"Connection error", nil)];
-                                         [alert setMessage:errorDescription];
-                                         [alert setDelegate:self];
-                                         [alert addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
-                                         [alert addButtonWithTitle:NSLocalizedString(@"Try again", nil)];
-                                         [alert show];
+                                         if (self.connectionErrorNo > 2) {
+                                             UIAlertView *alert = [[UIAlertView alloc] init];
+                                             [alert setTitle:NSLocalizedString(@"Connection error", nil)];
+                                             [alert setMessage:errorDescription];
+                                             [alert setDelegate:self];
+                                             [alert addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
+                                             [alert addButtonWithTitle:NSLocalizedString(@"Try again", nil)];
+                                             [alert show];
+                                         }
+                                         else {
+                                             [self performSelector:@selector(downloadData) withObject:nil afterDelay:0.4f];
+                                         }
                                          
                                      }];
     
@@ -103,12 +111,13 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    self.connectionErrorNo = 0;
     
     if (buttonIndex == 1) {
         NSLog(@"download");
         [self downloadData];
     }
-    
+
     
 }
 

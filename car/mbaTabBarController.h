@@ -11,5 +11,6 @@
 @interface mbaTabBarController : UITabBarController
 
 @property (strong, nonatomic) NSDictionary *data;
+@property ( nonatomic) NSInteger connectionErrorNo;
 
 @end
