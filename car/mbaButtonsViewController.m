@@ -62,8 +62,8 @@
     
     NSMutableArray *params = [[NSMutableArray alloc] init];
 
-    [params addObject: @{@"id" :@1, @"value" : @0, @"title": @"ajoj" }];
-    [params addObject: @{@"id" :@2, @"value" : @1, @"title": @"ahojj" }];
+    [params addObject: @{@"id" :@"1", @"title": @"ajoj", @"value" : @"1" }];
+//    [params addObject: @{@"id" :@2, @"title": @"ahojj",  @"value" : @1 }];
     
     
     [manager POST:ipAddress parameters:@{@"buttons": params}

@@ -93,7 +93,7 @@
                                              [alert show];
                                          }
                                          else {
-                                             [self performSelector:@selector(downloadData) withObject:nil afterDelay:0.4f];
+                                             [self performSelector:@selector(downloadData) withObject:nil afterDelay:1.0f];
                                          }
                                          
                                      }];
