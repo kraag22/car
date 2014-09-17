@@ -11,16 +11,26 @@
 
 @implementation mbaLabelsView
 
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    
+    self = [super initWithCoder:aDecoder];
+    
+    if (self) {
+        self.labels = [[NSMutableArray alloc] init];
+        self.topPadding = 0.0f;
+        self.btnHeight = 40.0f;
+    }
+    return self;
+}
+
 - (void)addLabel:(NSDictionary *)label {
+    
     if (self.lastView == nil) {
         self.lastView = self.headline;
     }
     
-    if (self.labels == nil) {
-        self.labels = [[NSMutableArray alloc] init];
-    }
-    
     if (label[@"show"] == false) {
+        self.topPadding += self.btnHeight;
         return;
         // NOTREACHED
     }
@@ -41,8 +51,8 @@
             make.width.lessThanOrEqualTo(@400);
             make.width.greaterThanOrEqualTo(@200);
             make.height.equalTo(@60.0);
-            make.top.equalTo(self.lastView.mas_top).with.offset(50.0f);
-            make.centerX.equalTo(self.lastView.mas_centerX);
+            make.top.equalTo(self.lastView.mas_top).with.offset(50.0f + self.topPadding);
+            make.left.equalTo(self.headline.mas_centerX).with.offset(-50.0f);
             
             self.lastView = uiLabel;
         }];
@@ -50,7 +60,7 @@
         [self.labels addObject:uiLabel];
     }
     
-
+    self.topPadding = 0.0f;
 }
 
 - (UILabel *)getLabel:(NSNumber *)labelId {

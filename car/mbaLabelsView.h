@@ -11,8 +11,10 @@
 @interface mbaLabelsView : UIView
 @property (weak, nonatomic) IBOutlet UILabel *headline;
 
-@property (weak, nonatomic) UIView *lastView;
+@property (weak, nonatomic)   UIView *lastView;
 @property (strong, nonatomic) NSMutableArray *labels;
+@property (nonatomic)         float topPadding;
+@property (nonatomic)         float btnHeight;
 
 - (void)addLabel:(NSDictionary *)label;
 
