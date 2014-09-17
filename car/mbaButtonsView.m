@@ -31,7 +31,7 @@
     }
     
     NSLog(@"%@", button[@"id"]);
-    if ((button[@"show"] && button[@"show"] == false)) {
+    if ((button[@"show"] && [button[@"show"] boolValue] == false)) {
         self.topPadding += self.btnHeight;
         return;
         // NOTREACHED

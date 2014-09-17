@@ -29,7 +29,7 @@
         self.lastView = self.headline;
     }
     
-    if (label[@"show"] == false) {
+    if ([label[@"show"] boolValue] == false) {
         self.topPadding += self.btnHeight;
         return;
         // NOTREACHED
