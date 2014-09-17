@@ -50,6 +50,7 @@
         // create switch
         UISwitch *uiSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
         [uiSwitch addTarget:self.controller action:@selector(buttonStateChange:) forControlEvents:UIControlEventValueChanged];
+        [uiSwitch setOn:[button[@"value"] boolValue] animated:YES];
         [self addSubview:uiSwitch];
         
         uiSwitch.tag  = [button[@"id"] intValue];

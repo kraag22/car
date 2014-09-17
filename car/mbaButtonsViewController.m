@@ -42,10 +42,10 @@
     NSString *rez = state == YES ? @"YES" : @"NO";
     
     NSLog(@"%@ - %i", rez, [sender tag]);
-    [self apiPostButtons];
+    [self apiPostButtonState:state andId:[NSNumber numberWithInt:[sender tag]]];
 }
 
-- (void)apiPostButtons {
+- (void)apiPostButtonState:(BOOL)state andId:(NSNumber *)buttonid {
     
     NSString *ipAddress = [[NSUserDefaults standardUserDefaults] valueForKey:@"ip_address"];
     ipAddress = [NSString stringWithFormat:@"http://%@:12570", ipAddress];
@@ -61,9 +61,16 @@
     
     
     NSMutableArray *params = [[NSMutableArray alloc] init];
+    
+    NSString *value;
+    if (state) {
+        value = @"1";
+    }
+    else {
+        value = @"0";
+    }
 
-    [params addObject: @{@"id" :@"1", @"title": @"ajoj", @"value" : @"1" }];
-//    [params addObject: @{@"id" :@2, @"title": @"ahojj",  @"value" : @1 }];
+    [params addObject: @{@"id" :[buttonid stringValue], @"title": @"", @"value" : value }];
     
     
     [manager POST:ipAddress parameters:@{@"buttons": params}
