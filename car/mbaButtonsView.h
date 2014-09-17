@@ -14,8 +14,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *headline;
 
-@property (weak, nonatomic) mbaButtonsViewController *controller;
-@property (weak, nonatomic) UIView *lastView;
+@property (weak, nonatomic)   mbaButtonsViewController *controller;
+@property (weak, nonatomic)   UIView *lastView;
+@property (nonatomic)         float topPadding;
+@property (nonatomic)         float btnHeight;
 @property (strong, nonatomic) NSMutableArray *buttons;
 
 - (void)addButton:(NSDictionary *)button;
