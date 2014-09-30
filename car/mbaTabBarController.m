@@ -71,6 +71,7 @@
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         self.data = (NSDictionary *)responseObject;
         [self updateViews];
+        [self connected:YES];
         NSLog(@"%@", self.data);
         [self performSelector:@selector(downloadData) withObject:nil afterDelay:[self getRefreshInterval]];
     }
@@ -84,17 +85,10 @@
                                          }
                                          
                                          if (self.connectionErrorNo > 2) {
-                                             UIAlertView *alert = [[UIAlertView alloc] init];
-                                             [alert setTitle:NSLocalizedString(@"Connection error", nil)];
-                                             [alert setMessage:errorDescription];
-                                             [alert setDelegate:self];
-                                             [alert addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
-                                             [alert addButtonWithTitle:NSLocalizedString(@"Try again", nil)];
-                                             [alert show];
+                                             [self connected:NO];
                                          }
-                                         else {
-                                             [self performSelector:@selector(downloadData) withObject:nil afterDelay:1.0f];
-                                         }
+
+                                        [self performSelector:@selector(downloadData) withObject:nil afterDelay:1.0f];
                                          
                                      }];
     
@@ -119,6 +113,12 @@
     }
 
     
+}
+
+- (void)connected:(BOOL) isConnected {
+    for (mbaBaseViewController *controller in [self viewControllers]) {
+        [controller connected:isConnected];
+    }
 }
 
 - (void)updateViews {

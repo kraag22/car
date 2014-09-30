@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "mbaBaseView.h"
 
-@interface mbaLabelsView : UIView
+@interface mbaLabelsView : mbaBaseView
 @property (weak, nonatomic) IBOutlet UILabel *headline;
 
 @property (weak, nonatomic)   UIView *lastView;

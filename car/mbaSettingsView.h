@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "mbaBaseView.h"
 
 @class mbaSettingsViewController;
 
-@interface mbaSettingsView : UIView
+@interface mbaSettingsView : mbaBaseView
 
 @property (strong, nonatomic) UITextField *ipAddressField;
 @property (weak, nonatomic) mbaSettingsViewController *controller;

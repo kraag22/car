@@ -13,7 +13,9 @@
 @interface mbaBaseViewController : UIViewController
 
 @property (weak, nonatomic) mbaTabBarController *tabBarController;
+@property (nonatomic) BOOL isConnected;
 
 - (void)update;
+- (void)connected:(BOOL) isConnected;
 
 @end

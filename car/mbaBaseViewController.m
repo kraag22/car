@@ -9,6 +9,7 @@
 #import "mbaBaseViewController.h"
 
 #import "mbaTabBarController.h"
+#import "mbaBaseView.h"
 
 @interface mbaBaseViewController ()
 
@@ -20,7 +21,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.isConnected = NO;
     }
     return self;
 }
@@ -29,6 +30,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    if ([((mbaBaseView *)self.view) connectedBtn] == nil) {
+        [((mbaBaseView *)self.view) createConnectedBtn];
+        [((mbaBaseView *)self.view) updateConnectedBtn:self.isConnected];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +50,13 @@
 - (void)update {
 
 }
+
+- (void)connected:(BOOL) isConnected {
+    self.isConnected = isConnected;
+    
+    [((mbaBaseView *)self.view) updateConnectedBtn:isConnected];
+}
+
 
 /*
 #pragma mark - Navigation

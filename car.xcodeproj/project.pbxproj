@@ -25,6 +25,7 @@
 		774B916318EC7D6B00D028BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 774B916118EC7D6B00D028BE /* InfoPlist.strings */; };
 		774B916518EC7D6B00D028BE /* carTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 774B916418EC7D6B00D028BE /* carTests.m */; };
 		777439F6192D19EE001CDBAD /* mbaSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777439F5192D19EE001CDBAD /* mbaSettingsView.m */; };
+		7795627919DB143200A534D3 /* mbaBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7795627819DB143200A534D3 /* mbaBaseView.m */; };
 		77A57A3519365D590039B742 /* mbaLabelsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A57A3419365D590039B742 /* mbaLabelsView.m */; };
 		77B4C19F193F7E2F00CEA6B2 /* mbaButtonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B4C19E193F7E2F00CEA6B2 /* mbaButtonsViewController.m */; };
 		77B4C1A2193F8CA000CEA6B2 /* mbaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B4C1A1193F8CA000CEA6B2 /* mbaBaseViewController.m */; };
@@ -69,6 +70,8 @@
 		774B916418EC7D6B00D028BE /* carTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = carTests.m; sourceTree = "<group>"; };
 		777439F4192D19EE001CDBAD /* mbaSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbaSettingsView.h; sourceTree = "<group>"; };
 		777439F5192D19EE001CDBAD /* mbaSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mbaSettingsView.m; sourceTree = "<group>"; };
+		7795627719DB143200A534D3 /* mbaBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbaBaseView.h; sourceTree = "<group>"; };
+		7795627819DB143200A534D3 /* mbaBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mbaBaseView.m; sourceTree = "<group>"; };
 		77A57A3319365D590039B742 /* mbaLabelsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbaLabelsView.h; sourceTree = "<group>"; };
 		77A57A3419365D590039B742 /* mbaLabelsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mbaLabelsView.m; sourceTree = "<group>"; };
 		77B4C19D193F7E2F00CEA6B2 /* mbaButtonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mbaButtonsViewController.h; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				774B914818EC7D6A00D028BE /* Main_iPad.storyboard */,
 				77B4C1A0193F8CA000CEA6B2 /* mbaBaseViewController.h */,
 				77B4C1A1193F8CA000CEA6B2 /* mbaBaseViewController.m */,
+				7795627719DB143200A534D3 /* mbaBaseView.h */,
+				7795627819DB143200A534D3 /* mbaBaseView.m */,
 				774B914B18EC7D6A00D028BE /* mbaLabelsViewController.h */,
 				774B914C18EC7D6A00D028BE /* mbaLabelsViewController.m */,
 				77A57A3319365D590039B742 /* mbaLabelsView.h */,
@@ -161,7 +166,6 @@
 				777439F5192D19EE001CDBAD /* mbaSettingsView.m */,
 				77CEB4821923D74500938845 /* mbaTabBarController.h */,
 				77CEB4831923D74500938845 /* mbaTabBarController.m */,
-				774B915118EC7D6A00D028BE /* Images.xcassets */,
 				774B913A18EC7D6A00D028BE /* Supporting Files */,
 			);
 			path = car;
@@ -170,6 +174,7 @@
 		774B913A18EC7D6A00D028BE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				774B915118EC7D6A00D028BE /* Images.xcassets */,
 				774B913B18EC7D6A00D028BE /* car-Info.plist */,
 				774B913C18EC7D6A00D028BE /* InfoPlist.strings */,
 				774B913F18EC7D6A00D028BE /* main.m */,
@@ -246,6 +251,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Martin Bartusek";
 				TargetAttributes = {
+					774B912F18EC7D6A00D028BE = {
+						DevelopmentTeam = M4VBY4EELF;
+					};
 					774B915618EC7D6B00D028BE = {
 						TestTargetID = 774B912F18EC7D6A00D028BE;
 					};
@@ -332,6 +340,7 @@
 			files = (
 				77CEB4841923D74500938845 /* mbaTabBarController.m in Sources */,
 				774B914018EC7D6A00D028BE /* main.m in Sources */,
+				7795627919DB143200A534D3 /* mbaBaseView.m in Sources */,
 				774B914D18EC7D6A00D028BE /* mbaLabelsViewController.m in Sources */,
 				77B4C19F193F7E2F00CEA6B2 /* mbaButtonsViewController.m in Sources */,
 				77A57A3519365D590039B742 /* mbaLabelsView.m in Sources */,
@@ -475,10 +484,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "car/car-Prefix.pch";
 				INFOPLIST_FILE = "car/car-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -489,10 +501,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "car/car-Prefix.pch";
 				INFOPLIST_FILE = "car/car-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

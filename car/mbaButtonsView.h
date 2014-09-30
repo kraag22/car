@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "mbaBaseView.h"
 
 @class mbaButtonsViewController;
 
-@interface mbaButtonsView : UIView
+@interface mbaButtonsView : mbaBaseView
 
 @property (weak, nonatomic) IBOutlet UILabel *headline;
 
