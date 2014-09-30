@@ -12,12 +12,13 @@
 
 @implementation mbaSettingsView
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    
+    self = [super initWithCoder:aDecoder];
+    
     if (self) {
-        // Initialization code
     }
+    
     return self;
 }
 
