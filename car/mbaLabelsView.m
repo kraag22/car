@@ -19,6 +19,7 @@
         self.labels = [[NSMutableArray alloc] init];
         self.topPadding = 0.0f;
         self.btnHeight = 40.0f;
+        
     }
     return self;
 }
@@ -52,7 +53,7 @@
             make.width.greaterThanOrEqualTo(@200);
             make.height.equalTo(@60.0);
             make.top.equalTo(self.lastView.mas_top).with.offset(50.0f + self.topPadding);
-            make.left.equalTo(self.headline.mas_centerX).with.offset(-50.0f);
+            make.left.equalTo(self.headline.mas_centerX).with.offset(-100.0f);
             
             self.lastView = uiLabel;
         }];
