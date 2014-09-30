@@ -41,8 +41,8 @@
     BOOL state = [sender isOn];
     NSString *rez = state == YES ? @"YES" : @"NO";
     
-    NSLog(@"%@ - %i", rez, [sender tag]);
-    [self apiPostButtonState:state andId:[NSNumber numberWithInt:[sender tag]]];
+    NSLog(@"%@ - %li", rez, (long)[sender tag]);
+    [self apiPostButtonState:state andId:[NSNumber numberWithInteger:[sender tag]]];
 }
 
 - (void)apiPostButtonState:(BOOL)state andId:(NSNumber *)buttonid {

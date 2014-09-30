@@ -78,7 +78,7 @@
                                      failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                          NSString *errorDescription = @"Uknown error";
                                          self.connectionErrorNo++;
-                                         NSLog(@"errors: %i", self.connectionErrorNo);
+                                         NSLog(@"errors: %zd", self.connectionErrorNo);
                                          
                                          if ([error.userInfo valueForKey:@"NSLocalizedDescription"]) {
                                              errorDescription = [error.userInfo valueForKey:@"NSLocalizedDescription"];
