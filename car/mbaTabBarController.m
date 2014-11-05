@@ -62,7 +62,7 @@
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"PUT"];
     [request setValue:@"GetJSON" forHTTPHeaderField:@"Content-Type"];
-    [request setTimeoutInterval:2.0f];
+    [request setTimeoutInterval:4.0f];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
