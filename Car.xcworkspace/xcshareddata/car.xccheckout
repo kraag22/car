@@ -5,23 +5,23 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>5A6E6A79-D88A-4E46-9119-B83FC722DA3D</string>
+	<string>F6FB3931-4350-4A89-9D6F-764DFF4DDAAB</string>
 	<key>IDESourceControlProjectName</key>
 	<string>car</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D97FE253D3C9498C361DC3DF7576D17C219380D3</key>
-		<string>ssh://github.com/kraag22/car.git</string>
+		<string>github.com:kraag22/car.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>car.xcodeproj/project.xcworkspace</string>
+	<string>car.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D97FE253D3C9498C361DC3DF7576D17C219380D3</key>
-		<string>../..</string>
+		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/kraag22/car.git</string>
+	<string>github.com:kraag22/car.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
