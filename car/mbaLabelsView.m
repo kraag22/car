@@ -36,26 +36,36 @@
         // NOTREACHED
     }
     UILabel *uiLabel = [self getLabel:label[@"id"]];
-    NSString *text = [NSString stringWithFormat:@"%@ - %@ %@", label[@"title"], label[@"value"] , label[@"unit"]];
+    NSString *text = [NSString stringWithFormat:@"%@ %@", label[@"value"] , label[@"unit"]];
     
     if (uiLabel != nil) {
         [uiLabel setText:text];
     }
     else {
+        UILabel *uiTitle = [[UILabel alloc] init];
+        uiTitle.text = label[@"title"];
+        [self addSubview:uiTitle];
+        
         uiLabel = [[UILabel alloc] init];
         uiLabel.text = text;
         uiLabel.tag  = [label[@"id"] intValue];
-        
         [self addSubview:uiLabel];
         
-        [uiLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        [uiTitle mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.lessThanOrEqualTo(@400);
             make.width.greaterThanOrEqualTo(@200);
             make.height.equalTo(@60.0);
             make.top.equalTo(self.lastView.mas_top).with.offset(50.0f + self.topPadding);
-            make.left.equalTo(self.headline.mas_centerX).with.offset(-100.0f);
+            make.centerX.equalTo(self.headline.mas_centerX).with.offset(-50.0f);
             
             self.lastView = uiLabel;
+        }];
+        
+        [uiLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.equalTo(@100);
+            make.height.equalTo(uiTitle.mas_height);
+            make.top.equalTo(uiTitle.mas_top);
+            make.left.equalTo(uiTitle.mas_right).with.offset(40.0f);
         }];
         
         [self.labels addObject:uiLabel];
